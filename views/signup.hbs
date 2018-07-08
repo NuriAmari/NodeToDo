@@ -1,0 +1,35 @@
+<style>
+  body {
+    background-image: url("/images/nyc-background.png");
+    background-repeat: no-repeat, repeat;
+  }
+</style>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary shadow">
+  <a class="navbar-brand" href="#">ToDo</a>
+</nav>
+<div class="container h-100">
+  <div class="row h-100 align-items-center">
+      <div class="card shadow offset-1 col-8 offset-sm-1 offset-2 col-sm-10 col-md-8 col-lg-5 p-5">
+        <h1 class="text-primary">Hi there!</h1>
+        <p class="mb-4 text-muted">Sign in with to get started with ToDo</p>
+        {{#if hasErrors}}
+          <div class="alert alert-danger align-middle" role="alert">
+            {{# each messages }}
+              <p style="margin: 0">{{this}}</p>
+            {{/ each}}
+          </div>
+        {{/if }}
+        <form method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Sign In or Sign Up</button>
+        </form>
+      </div>
+  </div>
+</div>

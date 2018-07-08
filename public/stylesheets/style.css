@@ -1,0 +1,23 @@
+html {
+  height:100%;
+}
+
+body {
+  padding-top: 60px;
+  height: 100%;
+}
+
+.list-group-item {
+  transition: all 0.3s ease 0s;
+}
+
+.list-group-item:hover {
+  background: #f5c6cb;
+}
+
+.list-group-item span {
+  visibility: hidden;
+}
+.list-group-item:hover span {
+  visibility: visible;
+}
